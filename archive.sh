@@ -17,7 +17,7 @@ else
     for ligne in $(ls $1)
     do 
         ((compte++))
-        if [ "$ligne" = "node_modules" -o "$ligne" = "composer" -o "$ligne" = "vendor" -o "$ligne" = "cache" -o "$ligne" = "build" ]
+        if [ "$ligne" = "node_modules" -o "$ligne" = "composer" -o "$ligne" = "vendor" -o "$ligne" = "cache" -o "$ligne" = "build" -o "$ligne" = ".vscode"]
         then
             echo "$ligne a ne pas copier" 
             ((PasCopier++))
